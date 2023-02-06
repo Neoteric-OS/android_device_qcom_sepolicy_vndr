@@ -34,3 +34,4 @@ type vendor_hal_dataconnection_service,  hal_service_type, protected_service, se
 type vendor_hal_servicetrackeraidl_service,   hal_service_type,protected_service,service_manager_type;
 type vendor_hal_poweroptservice_service, hal_service_type, protected_service, service_manager_type;
 type vendor_hal_alarmaidl_service, service_manager_type, hal_service_type;
+type vendor_hal_qconfig_service,         hal_service_type, protected_service, service_manager_type;
