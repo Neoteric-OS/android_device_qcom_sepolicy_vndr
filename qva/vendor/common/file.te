@@ -148,3 +148,6 @@ type vendor_sysfs_slab_zshandle_storeuser, fs_type, sysfs_type;
 type vendor_sysfs_slab_zspage_storeuser, fs_type, sysfs_type;
 
 type vendor_sysfs_usb_node, fs_type, sysfs_type;
+
+#qcc
+type vendor_qccvendor_data_file, data_file_type, file_type;
