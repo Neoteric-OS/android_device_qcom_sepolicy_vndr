@@ -268,3 +268,5 @@
 #wificfr daemon
 /(vendor|system/vendor)/bin/wificfrtool    u:object_r:wificfrsvc_exec:s0
 
+#qcc
+/data/vendor/(qcc|qdma)(/.*)?                                       u:object_r:vendor_qccvendor_data_file:s0
