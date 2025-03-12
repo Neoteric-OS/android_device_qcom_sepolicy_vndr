@@ -1,4 +1,4 @@
-# Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) 2024-2025 Qualcomm Innovation Center, Inc. All rights reserved.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_sec_cloudagent, domain;
@@ -17,6 +17,9 @@ binder_call(vendor_sec_cloudagent, servicemanager);
 allow vendor_sec_cloudagent vendor_sec_vndr_data_file:file { create_file_perms };
 allow vendor_sec_cloudagent vendor_sec_vndr_data_file:dir { rw_dir_perms };
 
+allow vendor_sec_cloudagent vendor_aware_vndr_data_file:file { create_file_perms };
+allow vendor_sec_cloudagent vendor_aware_vndr_data_file:dir { rw_dir_perms };
+
 allow vendor_sec_cloudagent vendor_sec_datamanager_service:service_manager find;
 binder_call(vendor_sec_cloudagent, vendor_sec_datamanager);
 
@@ -29,3 +32,4 @@ binder_call(vendor_sec_cloudagent, vendor_sec_provisioningmanager);
 set_prop(vendor_sec_cloudagent, vendor_secca_prop);
 
 net_domain(vendor_sec_cloudagent)
+
