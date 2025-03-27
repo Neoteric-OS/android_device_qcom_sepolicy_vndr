@@ -1,0 +1,42 @@
+# Copyright (c) 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# # SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+type vendor_awareagent, domain;
+type vendor_awareagent_exec, exec_type, vendor_file_type, file_type;
+
+# # Allow for transition from init domain to vendor_hal_awareagent_qti
+init_daemon_domain(vendor_awareagent)
+
+vndbinder_use(vendor_awareagent)
+
+# Allow vendor_awareagent to be registered with service manager
+add_service(vendor_awareagent, vendor_awareagent_service)
+binder_call(vendor_awareagent, servicemanager);
+
+#============= vendor_awareagent ==============
+allow vendor_awareagent proc_meminfo:file { r_file_perms };
+allow vendor_awareagent proc_stat:file { r_file_perms };
+allow vendor_awareagent sysfs_net:dir { r_dir_perms };
+allow vendor_awareagent sysfs_net:file { r_file_perms };
+
+allow vendor_awareagent vendor_sysfs_battery_supply:dir search;
+allow vendor_awareagent vendor_sysfs_battery_supply:file { read open };
+
+allow vendor_awareagent vendor_aware_vndr_data_file:dir { rw_dir_perms };
+allow vendor_awareagent vendor_aware_vndr_data_file:file { create_file_perms };
+
+allow vendor_awareagent vendor_persist_aware_file:dir create_dir_perms;
+allow vendor_awareagent vendor_persist_aware_file:file create_file_perms;
+allow vendor_awareagent mnt_vendor_file:dir search;
+neverallow {domain -init -vendor_init -vendor_awareagent -vendor_sec_provisioningmanager -vendor_sec_datamanager} vendor_persist_aware_file:{dir file} *;
+
+set_prop(vendor_awareagent, vendor_awareagent_prop);
+
+allow vendor_awareagent vendor_sec_datamanager_service:service_manager find;
+binder_call(vendor_awareagent, vendor_sec_datamanager);
+
+allow vendor_awareagent vendor_sec_provisioningmanager_service:service_manager find;
+binder_call(vendor_awareagent, vendor_sec_provisioningmanager);
+
+allow vendor_awareagent sysfs:file read;
+allow vendor_awareagent proc_uptime:file { open read };
