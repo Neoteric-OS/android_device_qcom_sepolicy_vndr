@@ -2,7 +2,5 @@
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 type vendor_sec_featuremanager_service,  vendor_service,service_manager_type;
-type vendor_sec_provisioningmanager_service,  vendor_service,service_manager_type;
 type vendor_sec_datamanager_service,     vendor_service,service_manager_type;
-type vendor_sec_cloudagent_service,      vendor_service,service_manager_type;
 type vendor_awareagent_service, vendor_service,service_manager_type;
