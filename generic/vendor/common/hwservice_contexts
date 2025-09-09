@@ -34,6 +34,7 @@ vendor.qti.imsrtpservice::IRTPService                          u:object_r:vendor
 vendor.qti.data.factory::IFactory                               u:object_r:vendor_hal_datafactory_hwservice:s0
 vendor.qti.ims.factor::IImsFactory                              u:object_r:vendor_hal_imsfactory_hwservice:s0
 vendor.qti.ims.factory::IImsFactory                             u:object_r:vendor_hal_imsfactory_hwservice:s0
+vendor.qti.diaghal::Idiag					u:object_r:vendor_hal_diag_hwservice:s0
 vendor.qti.hardware.data.connection::IDataConnection            u:object_r:vendor_hal_dataconnection_hwservice:s0
 vendor.qti.hardware.cacert::IService                            u:object_r:vendor_hal_cacert_hwservice:s0
 vendor.display.config::IDisplayConfig                           u:object_r:vendor_hal_display_config_hwservice:s0
