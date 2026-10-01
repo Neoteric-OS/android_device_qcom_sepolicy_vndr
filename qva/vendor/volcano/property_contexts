@@ -29,6 +29,10 @@
 # Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
+#BHS
+vendor.bhs.remoteproc                    u:object_r:vendor_bhs_remoteproc_prop:s0
+vendor.bhs.cpu_hotplug                   u:object_r:vendor_bhs_cpu_prop:s0
+
 #face3d
 persist.vendor.biometricsface.pr u:object_r:vendor_face3d_producer_prop:s0
 #sec properties
@@ -38,3 +42,4 @@ vendor.secca.service                         u:object_r:vendor_secca_prop:s0
 #aware-agent
 vendor.awareagent.service                    u:object_r:vendor_awareagent_prop:s0
 persist.vendor.qrs.service                   u:object_r:vendor_qrs_service_prop:s0
+persist.vendor.qrs.enable.tag.resolver       u:object_r:vendor_qrs_enable_tag_resolver_prop:s0

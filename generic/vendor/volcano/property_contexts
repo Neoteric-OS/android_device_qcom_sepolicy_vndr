@@ -1,0 +1,11 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries. 
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+# FAS signal
+persist.vendor.fas.signal  u:object_r:vendor_fas_signal_prop:s0
+
+# qlas File Migration Properties
+persist.vendor.qlas.migrated    u:object_r:vendor_qlas_migrated_prop:s0
+persist.vendor.fas.hub_ready u:object_r:vendor_hub_ready_prop:s0
+persist.vendor.fas.onboarded u:object_r:vendor_fas_onboarded_prop:s0
+vendor.dm.restart    u:object_r:vendor_dm_restart_prop:s0

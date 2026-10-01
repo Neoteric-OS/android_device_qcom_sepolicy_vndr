@@ -25,8 +25,8 @@
 # OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 # IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 #keymint quickboot prop
@@ -34,3 +34,9 @@ vendor_restricted_prop(vendor_tee_keymint_quickboot);
 
 #Gatekeper quickboot prop
 vendor_restricted_prop(vendor_tee_gk_quickboot);
+
+#Virt service enable property
+vendor_internal_prop(vendor_virt_service_enabled_prop);
+
+#VM shutdown toggle
+vendor_restricted_prop(vendor_vm_ssrenable_prop);

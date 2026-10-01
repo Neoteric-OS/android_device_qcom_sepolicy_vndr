@@ -1,6 +1,26 @@
-# Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 /vendor/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti-lazy                  u:object_r:hal_bluetooth_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.AGMIPC@1\.0-service          u:object_r:vendor_agmservice_qti_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm-service\.playready-qti       u:object_r:vendor_hal_drm_playready_aidl_qti_exec:s0
 
+
+###################################
+#Dev nodes
+#
+/dev/power_state                      u:object_r:vendor_power_state_device:s0
+#swap partition node
+/dev/block/by-name/swap				  u:object_r:vendor_hibernate_swap:s0
+
+# mink socket
+/(vendor|system/vendor)/bin/hlosminkdaemon      u:object_r:vendor_hlosminkdaemon_exec:s0
+/dev/socket/hlos_mink_opener                    u:object_r:vendor_hlos_minkd_opener_socket:s0
+
+###################################
+# System files
+#
+/vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateservice@1\.0-service			   u:object_r:vendor_hal_powerstateservice_qti_exec:s0
+/vendor/bin/hw/vendor\.qti\.hardware\.power\.powerstateutility@1\.0-service			   u:object_r:vendor_hal_powerstateutility_qti_exec:s0
+/vendor/bin/check_virtsupport\.sh                                                      u:object_r:vendor_init_check_virtsupport_sh_exec:s0
+/vendor/bin/vendor\.qti\.qvirtvendor-service                                           u:object_r:vendor_hal_qvirtvendor_default_exec:s0

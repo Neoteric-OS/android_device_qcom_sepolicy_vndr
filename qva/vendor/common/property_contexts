@@ -125,6 +125,9 @@ persist.vendor.vin.                          u:object_r:vendor_hvdcp_opti_prop:s
 persist.vendor.qg.                           u:object_r:vendor_hvdcp_opti_prop:s0
 persist.vendor.soh.                          u:object_r:vendor_hvdcp_opti_prop:s0
 
+#healthd properties
+persist.vendor.hal_health.                   u:object_r:vendor_hal_health_prop:s0
+
 # XLAT property
 persist.vendor.net.doxlat                    u:object_r:vendor_xlat_prop:s0
 
@@ -166,3 +169,6 @@ ro.vendor.qc_aon_presence                    u:object_r:vendor_qc_aon_prop:s0
 
 #UWB
 persist.vendor.qti.uwb.                      u:object_r:vendor_uwb_prop:s0
+
+# Proximity/BCS Soft SKU license
+persist.vendor.qti.proximity.                u:object_r:vendor_proximity_prop:s0
