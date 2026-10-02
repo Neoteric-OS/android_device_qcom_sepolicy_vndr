@@ -135,3 +135,5 @@ set_prop(vendor_init, vendor_trustedui_listener_enabled_prop)
 set_prop(vendor_init, vendor_trustedui_listener_start_prop)
 set_prop(vendor_init, vendor_trustedui_start_prop)
 
+# Allow setting ssr prop
+set_prop(vendor_init, vendor_ssr_prop)
