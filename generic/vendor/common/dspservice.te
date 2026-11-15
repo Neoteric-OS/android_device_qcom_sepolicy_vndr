@@ -41,7 +41,8 @@ binder_call(vendor_hal_dspmanager_client, vendor_hal_dspmanager_server)
 binder_call(vendor_hal_dspmanager_server, vendor_hal_dspmanager_client)
 
 # Add dspservice to hwservice_manager and allow it to be discovered
-hal_attribute_hwservice(vendor_hal_dspmanager, vendor_hal_dspmanager_hwservice)
+allow { vendor_hal_dspmanager_client -isolated_app_all } vendor_hal_dspmanager_hwservice:hwservice_manager find;
+add_hwservice(vendor_hal_dspmanager_server, vendor_hal_dspmanager_hwservice)
 
 # For reading dir/files on "/vendor/dsp"
 r_dir_file(vendor_dspservice, adsprpcd_file)
